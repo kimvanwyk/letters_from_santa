@@ -6,14 +6,14 @@
         <table border=1>
           <tr>
             {% for choice in choices %}
-              <td><img src="{{ choice }}" width="100%"></td>
+              <td width="{{ width }}%">{{ choice | safe}}</td>
             {% endfor %}
           </tr>
           <tr>
             {% for choice in choices %}
               <td>
                 <center>
-                  <input type="submit" value="Select" name="{{ choice }}">
+                  <input type="submit" value="Select" name="select_{{ loop.index0 }}">
                 </center>
               </td>
             {% endfor %}
